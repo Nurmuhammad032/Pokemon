@@ -75,7 +75,7 @@ const Landing = () => {
         </Paper>
         <div className="d-flex justify-content-center mt-4 mb-5">
           <div className="mx-3">
-            <Link to="/pokemos" className="landing-links link-1">
+            <Link to="/pokemons" className="landing-links link-1">
               <span>Pokedox</span>
               <img src={bg} alt="bg" className="landing-bg" />
             </Link>

@@ -1,0 +1,10 @@
+.app__pokemons {
+  padding: 4rem 0;
+  position: relative;
+
+  .app__pokemons-bg {
+    position: absolute;
+    right: -6rem;
+    top: -6rem;
+  }
+}
