@@ -26,7 +26,7 @@ const Pokemon = () => {
 
   return (
     <>
-      {!loading ? (
+      {pokemonDetail ? (
         <section className="app__pokemon">
           <div
             className={`container-fluid py-5 ${pokemonDetail.data?.types[0].type.name}`}
