@@ -30,7 +30,7 @@ const PokemonCard = ({ data }) => {
             </div>
             <div className="pokImg">
               <img
-                src={data?.sprites?.front_default}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
                 alt="there's a pokemonImg"
               />
             </div>

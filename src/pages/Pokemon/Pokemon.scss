@@ -22,9 +22,11 @@
   }
 
   .app__pokemon-img {
+    position: relative;
     width: 25rem;
-    height: 20rem;
+    height: 23rem;
     margin: 0 auto;
+    z-index: 5;
 
     img {
       width: 100%;

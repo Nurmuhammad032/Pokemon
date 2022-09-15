@@ -47,7 +47,7 @@ const Landing = () => {
         >
           <IconButton
             type="submit"
-            onClick={fetchData}
+            // onClick={fetchData}
             sx={{
               p: "10px",
               position: "relative",

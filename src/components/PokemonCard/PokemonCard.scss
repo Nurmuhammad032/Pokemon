@@ -49,8 +49,10 @@
     }
   }
   .pokImg {
-    width: 15rem;
-    height: 8rem;
+    width: 8rem;
+    padding-top: 1.8rem;
+    height: 10rem;
+    z-index: 5;
 
     img {
       width: 100%;

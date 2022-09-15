@@ -49,7 +49,7 @@ const Pokemon = () => {
                 <div className="col">
                   <div className="app__pokemon-img">
                     <img
-                      src={pokemonDetail.data?.sprites.front_default}
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonDetail.data?.id}.svg`}
                       alt="pokemon"
                     />
                   </div>

@@ -57,7 +57,7 @@ export default function FullWidthTabs({ about, stats }) {
   };
 
   return (
-    <Box sx={{ background: "#fff", width: "100%" }}>
+    <Box sx={{ background: "#fff", width: "100%", height: '40vh' }}>
       <AppBar
         position="static"
         sx={{
@@ -105,13 +105,13 @@ export default function FullWidthTabs({ about, stats }) {
               <div className="col-md-10">
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Box sx={{ width: "100%", mr: 1 }}>
-                    <LinearProgress variant="determinate" value={s.base_stat} />
+                    <LinearProgress variant="determinate" value={s.base_stat > 100 ? 100 : s.base_stat} />
                   </Box>
                   <Box sx={{ minWidth: 35 }}>
                     <Typography
                       variant="body2"
                       color="text.secondary"
-                    >{`${Math.round(s.base_stat)}%`}</Typography>
+                    >{`${s.base_stat > 100 ? 'over 100' : s.base_stat}%`}</Typography>
                   </Box>
                 </Box>
               </div>
