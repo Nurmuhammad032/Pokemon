@@ -5,14 +5,10 @@ import PokemonCard from "../../components/PokemonCard/PokemonCard";
 import { CircularProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 import { West } from "@mui/icons-material";
-import bg from '../../assets/bg-img.png'
+import bg from "../../assets/bg-img.png";
 
 const Pokemons = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [pokemonsData, setPokemonsData] = useState({});
-  const [pokemonDetail, setPokemonDetail] = useState({});
-
-  console.log(pokemonsData);
 
   useEffect(() => {
     const init = async () => {
@@ -30,14 +26,14 @@ const Pokemons = () => {
 
   return (
     <section className="app__pokemons">
-    <img src={bg} alt="bgPhoto" className="app__pokemons-bg" />
+      <img src={bg} alt="bgPhoto" className="app__pokemons-bg" />
       <div className="container">
         <Link to={"/"} className="text-dark text-decoration-none">
           <West />
         </Link>
         <h1 className="my-3">Pokedex</h1>
         <div className="d-flex flex-wrap justify-content-center">
-          {pokemonsData.length > 0 ? (
+          {pokemonsData.length ? (
             pokemonsData.map((pokemon, i) => (
               <div key={i} className="mx-3 my-3">
                 <PokemonCard data={pokemon.data} />
@@ -51,5 +47,7 @@ const Pokemons = () => {
     </section>
   );
 };
+
+
 
 export default Pokemons;

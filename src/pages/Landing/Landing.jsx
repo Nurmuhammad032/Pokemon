@@ -18,10 +18,7 @@ const Landing = () => {
     if (pokemon) {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        .then((res) => {
-          setPokemonDetail(res);
-          // console.log(res.data);
-        })
+        .then((res) => setPokemonDetail(res))
         .catch(() => setPokemonDetail({ err: "Not Found" }));
       setIsLoading(false);
     }
