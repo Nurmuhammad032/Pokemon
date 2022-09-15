@@ -9,24 +9,19 @@ import Loading from "../../components/Loading/Loading";
 
 const Pokemon = () => {
   const { name } = useParams();
-  const [loading, setLoading] = useState(true);
-  const [pokemonDetail, setPokemonDetail] = useState({});
-  console.log(pokemonDetail);
+  const [pokemonDetail, setPokemonDetail] = useState(null);
 
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
       .then((res) => setPokemonDetail(res))
       .catch((err) => console.log(err));
-  }, []);
+  }, [name]);
 
-  useEffect(() => {
-    setLoading(false);
-  }, [pokemonDetail]);
 
   return (
     <>
-      {pokemonDetail ? (
+      {pokemonDetail !== null ? (
         <section className="app__pokemon">
           <div
             className={`container-fluid py-5 ${pokemonDetail.data?.types[0].type.name}`}
