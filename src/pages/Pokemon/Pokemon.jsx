@@ -1,7 +1,7 @@
 import "./Pokemon.scss";
+import { motion } from "framer-motion";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { West } from "@mui/icons-material";
 import FullWidthTabs from "./PokemonTabs";
@@ -17,7 +17,6 @@ const Pokemon = () => {
       .then((res) => setPokemonDetail(res))
       .catch((err) => console.log(err));
   }, [name]);
-
 
   return (
     <>
@@ -47,12 +46,15 @@ const Pokemon = () => {
               </div>
               <div className="row">
                 <div className="col">
-                  <div className="app__pokemon-img">
+                  <motion.div
+                    whileInView={{ scale: [0.7, 1] }}
+                    className="app__pokemon-img"
+                  >
                     <img
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonDetail.data?.id}.svg`}
                       alt="pokemon"
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

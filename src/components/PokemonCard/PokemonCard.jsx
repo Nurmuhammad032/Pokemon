@@ -8,8 +8,9 @@ const PokemonCard = ({ data }) => {
     <>
       {data !== undefined && (
         <motion.div
-          whileInView={{ y: [40, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.4 }}
+          whileInView={{ y: [30, 0], opacity: [0, 1] }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.4}}
           className="animate"
         >
           <Link
